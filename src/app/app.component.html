@@ -1,0 +1,10 @@
+<app-header [username] ="user$ | async"></app-header>
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<app-footer></app-footer>
+
+<ng-container *ngIf="user$ | async as user" >     <!-- Container, der nur angezeigt wird, wenn Daten kommen und bildet einen synchronen User ab (Momentaufnahme)-->
+    NGContainer: {{ user }}   
+</ng-container>
